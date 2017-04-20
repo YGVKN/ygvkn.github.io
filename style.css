@@ -1,6 +1,4 @@
 
-body{
-margin:0;
-background:#459911;
-box-sizing:border-box;
-}
+* {margin:0;padding:0;box-sizing:border-box;}
+.mainWrapp{width:950px;height:1000px;margin:0 auto;border:1px solid deeppink;}
+h1{text-align:center;margin:30px 0 0 0;opacity:0.3;color:deeppink;}
