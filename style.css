@@ -1,4 +1,103 @@
+/*#FF1493
+(255,20,147)*/
 
-* {margin:0;padding:0;box-sizing:border-box;}
-.mainWrapp{width:950px;height:1000px;margin:0 auto;border:1px solid deeppink;}
-h1{text-align:center;margin:30px 0 0 0;opacity:0.3;color:deeppink;}
+
+@charset "utf-8";
+
+
+/*...шрифты важны,шрифты разные нужны.*/
+/*
+@import(url:);
+@font-face
+{
+    font-family: some font;  Имя шрифта 
+    src: url();  Путь к файлу со шрифтом 
+}
+*/
+@font-face{
+    font-family: captchaCode;
+    src:url(fonts/captchaCode.otf);
+}
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body,applet,embed,object,select,table,textarea
+{ 
+    scrollbar-arrow-color: rgba(255,20,147,0.4); /* Цвет стрелок */
+    scrollbar-base-color: rgba(255,20,147,0.4); /* Цвет полосы прокрутки */
+    scrollbar-shadow-color: rgba(255,20,147,0.4); /* Цвет тени */
+    scrollbar-highlight-color: rgba(255,20,147,0.4); /* Цвет светлых участков тени */
+    scrollbar-track-color: rgba(255,20,147,0.4);
+
+    height: 100%; 
+}
+.subject{display: inline-block;}
+.subjectTypeLambda{font-size: 18px;color: #fff;}
+.subjectType{color: #fff;font-size: 19px;}
+
+
+.subjectFont{color: #fff;font-family: captchaCode;font-size: 18px;}
+
+
+
+
+.sphere
+{
+    
+}
+.main
+{
+    width: 888px;
+    margin: 0 auto;
+    border: 1px solid rgba(255,20,147,0.4);
+    height: 100%;
+}
+
+header
+{
+    width: 886px;
+    height: 20px;
+    border: 1px solid rgba(255,20,147,0.4);    
+    background:rgb(255,20,147); 
+
+}
+
+.yourLife
+{
+    width: 886px;
+    height: 320px;
+    border: 1px solid rgba(255,20,147,0.4);    
+      
+}
+.content
+{
+    width: 886px;
+    height: 400px;
+}
+
+figure{
+    width: 886px;
+    height: 320px;
+    
+}
+img{width: 100%;
+height: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
