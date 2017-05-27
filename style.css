@@ -1,7 +1,5 @@
 /*#FF1493
 (255,20,147)*/
-
-
 @charset "utf-8";
 
 
@@ -14,7 +12,8 @@
     src: url();  Путь к файлу со шрифтом 
 }
 */
-@font-face{
+@font-face
+{
     font-family: captchaCode;
     src:url(fonts/captchaCode.otf);
 }
@@ -23,75 +22,37 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-html,body,applet,embed,object,select,table,textarea
-{ 
-    scrollbar-arrow-color: rgba(255,20,147,0.4); /* Цвет стрелок */
-    scrollbar-base-color: rgba(255,20,147,0.4); /* Цвет полосы прокрутки */
-    scrollbar-shadow-color: rgba(255,20,147,0.4); /* Цвет тени */
-    scrollbar-highlight-color: rgba(255,20,147,0.4); /* Цвет светлых участков тени */
-    scrollbar-track-color: rgba(255,20,147,0.4);
-
-    height: 100%; 
-}
-.subject{display: inline-block;}
-.subjectTypeLambda{font-size: 18px;color: #fff;}
-.subjectType{color: #fff;font-size: 19px;}
-
-
-.subjectFont{color: #fff;font-family: captchaCode;font-size: 18px;}
-
-
-
-
-.sphere
-{
+    border: none;
+    outline: none;
+    text-decoration: none;
     
 }
-.main
+:root
 {
-    width: 888px;
+    --color:#ff1493;
+    --colorMod:rgb(255,20,147);
+}
+div.sphere
+{
+    width: 100%;
+    max-width: 888px;
     margin: 0 auto;
-    border: 1px solid rgba(255,20,147,0.4);
-    height: 100%;
+    height: 777px;
+    border: 1px solid var(--color);
 }
 
-header
+.header
 {
-    width: 886px;
-    height: 20px;
-    border: 1px solid rgba(255,20,147,0.4);    
-    background:rgb(255,20,147); 
-
+width: 100%;
+height: 20px;
+background: var(--colorMod);    
 }
-
-.yourLife
+.logo
 {
-    width: 886px;
-    height: 320px;
-    border: 1px solid rgba(255,20,147,0.4);    
-      
+    color: #fff;
+    padding: 0 0 0 10px;
+    display: inline-block;
 }
-.content
-{
-    width: 886px;
-    height: 400px;
-}
-
-figure{
-    width: 886px;
-    height: 320px;
-    
-}
-img{width: 100%;
-height: 100%;}
-
-
-
-
-
-
-
 
 
 
