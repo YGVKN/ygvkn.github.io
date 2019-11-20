@@ -1,1 +1,3 @@
-document.querySelector("div.sphere").height = screen.height
+document.querySelector("div.sphere").style.height = screen.height + "px";
+
+
