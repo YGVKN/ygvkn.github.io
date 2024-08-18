@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>PWA Example</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="somefile.json" />
+    <link rel="manifest" href="/somefile.json" />
     <link rel="icon" href="icons/circle.svg" />
   </head>
   <body>
@@ -19,7 +19,7 @@
       if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
-      .register("sw.js")
+      .register("/sw.js")
       .then(res => console.log("service worker registered"))
       .catch(err => console.log("service worker not registered", err));
   });
