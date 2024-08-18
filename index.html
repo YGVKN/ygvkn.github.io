@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width" />
     <title>PWA Example</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="/manifest.json" />
+    <!--    <link rel="manifest" href="/manifest.json" /> -->
     <link rel="icon" href="icons/circle.svg" />
   </head>
   <body>
     <h1>PWA Example</h1>
+    <button id="find-me">Show my location</button><br />
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
     <script src="app.js" defer></script>
     <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-      }
+      console.log('logging');
+      //if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js"); }
     </script>
   </body>
 </html>
