@@ -8,6 +8,7 @@ const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
   "/somefile.json",
+  "/icons",
   "/app.js",
   "/style.css",
   "/icons/wheel.svg",
