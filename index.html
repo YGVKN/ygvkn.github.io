@@ -1,30 +1,14 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>PWA Example</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="manifest" href="/somefile.json" />
-    <link rel="icon" href="icons/circle.svg" />
+    <meta charset="utf-8">
+    <title>A2HS demo</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
-    <h1>PWA Example</h1>
-    <button id="find-me">Show my location</button><br />
-    <p id="status"></p>
-    <a id="map-link" target="_blank"></a>
-    <script src="app.js" defer></script>
-    <script>
-//      console.log('logging');
-      if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/sw.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err));
-  });
-}
-      //if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js"); }
-    </script>
+    <img src="images/fox1.jpg" alt="a fox picture">
+    <button class="add-button">Add to home screen</button>
   </body>
 </html>

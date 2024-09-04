@@ -1,1 +1,0 @@
-# ygvkn.github.io
