@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>YGVKN</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="manifest" href="/ygvkn.webmanifest" />
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
     <button id="find-me">Show my location</button><br />
@@ -14,11 +14,11 @@
     <a id="map-link" target="_blank"></a>
     <script src="app.js" defer></script>
     <script>
-      if('serviceWorker' in navigator) {
+      <!--      if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js', { scope: '/' });
       }
-    </script>
-    <!--    <script>
+    </script> -->
+    <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
           navigator.serviceWorker
@@ -26,6 +26,6 @@
             .then(res => console.log("service worker registered"))
             .catch(err => console.log("service worker not registered", err));
         });
-    </script> -->
+    </script>
   </body>
 </html>
