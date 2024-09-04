@@ -1,10 +1,10 @@
 {
   "name": "YGVKN",
   "short_name": "YGVKN",
-  "description": "YGVKN PWA Example",
+  "description": "YGVKN PWA",
   "start_url": "/",
-  "theme_color": "#eeffee",
-  "background_color": "#eeffee",
+  "theme_color": "#ff00f",
+  "background_color": "#ff00f",
   "display": "standalone",
   "icons": [
     {
@@ -15,14 +15,6 @@
       "src": "icons/circle.svg",
       "sizes": "72x72 96x96",
       "purpose": "maskable"
-    },
-    {
-      "src": "icons/tire.svg",
-      "sizes": "128x128 256x256"
-    },
-    {
-      "src": "icons/wheel.svg",
-      "sizes": "512x512"
     }
-  ]
+    ]
 }
