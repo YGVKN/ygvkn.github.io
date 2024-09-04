@@ -1,4 +1,4 @@
-const VERSION = "v2.1";
+const VERSION = "v2.2";
 
 // The name of the cache
 const CACHE_NAME = `PWA-EXAMPLE-${VERSION}`;
@@ -7,7 +7,7 @@ const CACHE_NAME = `PWA-EXAMPLE-${VERSION}`;
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
-  "/somefile.json",
+  "/YGVKN.webmanifest",
   "/icons",
   "/app.js",
   "/style.css",
