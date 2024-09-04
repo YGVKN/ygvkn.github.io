@@ -1,4 +1,4 @@
-const VERSION = "v2";
+const VERSION = "v2.1";
 
 // The name of the cache
 const CACHE_NAME = `PWA-EXAMPLE-${VERSION}`;
@@ -11,9 +11,8 @@ const APP_STATIC_RESOURCES = [
   "/icons",
   "/app.js",
   "/style.css",
-  "/icons/wheel.svg",
 ];
-
+// "/icons/wheel.svg",
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
