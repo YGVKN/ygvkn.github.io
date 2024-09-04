@@ -13,14 +13,14 @@
     <p id="status"></p>
     <a id="map-link" target="_blank"></a>
     <script src="app.js" defer></script>
-    <script>
-      <!--      if('serviceWorker' in navigator) {
+    <!--    <script>
+      if('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js', { scope: '/' });
       }
     </script> -->
     <script>
       if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function() {
+        window.addEventListener("load", () => {
           navigator.serviceWorker
             .register("/sw.js")
             .then(res => console.log("service worker registered"))

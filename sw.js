@@ -8,7 +8,7 @@ const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
   "/ygvkn.webmanifest",
-  "/icons/*.*",
+  "/icons/*",
   "/app.js",
   "/style.css"
 ];
