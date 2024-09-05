@@ -9,10 +9,9 @@ const APP_STATIC_RESOURCES = [
   "/app.webmanifest",
   "/index.html",
   "/favicon.ico",
-  "/style.css"
+  "/style.css",
   "/app.js",
-  "/icons",
-
+  "/icons"
 ];
 
 //self.addEventListener("install", installEvent => {
@@ -27,8 +26,7 @@ self.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       cache.addAll(APP_STATIC_RESOURCES);
-    })()
-  );
+    })());
 });
 
 self.addEventListener("activate", (event) => {

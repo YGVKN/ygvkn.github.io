@@ -3,8 +3,8 @@
   "short_name": "YGVKN",
   "description": "YGVKN PWA",
   "start_url": "/",
-  "theme_color": "#ff00f",
-  "background_color": "#ff00f",
+  "theme_color": "purple",
+  "background_color": "purple",
   "display": "standalone",
   "icons": [
     {
@@ -12,7 +12,7 @@
       "sizes": "48x48"
     },
     {
-      "src": "icons/circle.svg",
+      "src": "icons/favicon.ico",
       "sizes": "72x72 96x96",
       "purpose": "maskable"
     }
