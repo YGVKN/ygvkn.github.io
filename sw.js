@@ -1,25 +1,52 @@
-const VERSION = "v2.2";
+const VERSION = "v2.4";
 
 // The name of the cache
-const CACHE_NAME = `PWA-EXAMPLE-${VERSION}`;
+const CACHE_NAME = `YGVKN-PWA-${VERSION}`;
 
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
   "/",
+  "/app.webmanifest",
   "/index.html",
-  "/icons/*",
-  "/app.js",
+  "/favicon.ico",
   "/style.css"
-];
-// "/icons/wheel.svg",
+  "/app.js",
+  "/icons",
 
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
+];
+
+//self.addEventListener("install", installEvent => {
+//  installEvent.waitUntil(
+//    caches.open(CACHE_NAME).then(cache => {
+//      cache.addAll(APP_STATIC_RESOURCES);
+//    })
+//  );
+//});
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
       cache.addAll(APP_STATIC_RESOURCES);
-    })
+    })()
   );
 });
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
+      const names = await caches.keys();
+      await Promise.all(
+        names.map((name) => {
+          if (name !== CACHE_NAME) {
+            return caches.delete(name);
+          }
+        })
+      );
+      await clients.claim();
+    })()
+  );
+});
+
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(
@@ -29,32 +56,6 @@ self.addEventListener("fetch", fetchEvent => {
   );
 });
 
-// On install, cache the static resources
-//self.addEventListener("install", (event) => {
-//  event.waitUntil(
-//    (async () => {
-//      const cache = await caches.open(CACHE_NAME);
-//      cache.addAll(APP_STATIC_RESOURCES);
-//    })()
-//  );
-//});
-//
-//// delete old caches on activate
-//self.addEventListener("activate", (event) => {
-//  event.waitUntil(
-//    (async () => {
-//      const names = await caches.keys();
-//      await Promise.all(
-//        names.map((name) => {
-//          if (name !== CACHE_NAME) {
-//            return caches.delete(name);
-//          }
-//        })
-//      );
-//      await clients.claim();
-//    })()
-//  );
-//});
 //
 //// On fetch, intercept server requests
 //// and respond with cached responses instead of going to network

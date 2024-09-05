@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>YGVKN</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="manifest" href="/ygvkn.webmanifest" />
+    <link rel="manifest" href="/app.webmanifest" />
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
@@ -13,16 +13,11 @@
     <p id="status"></p>
     <a id="map-link" target="_blank"></a>
     <script src="app.js" defer></script>
-    <!--    <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', { scope: '/' });
-      }
-    </script> -->
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/sw.js")
+            .register("/sw.js", { scope: '/' })
             .then(res => console.log("service worker registered"))
             .catch(err => console.log("service worker not registered", err));
         });
