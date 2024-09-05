@@ -12,12 +12,12 @@
     <button id="find-me">Show my location</button><br />
     <p id="status"></p>
     <a id="map-link" target="_blank"></a>
-    <script src="app.js" defer></script>
+    <script src="app.js" preload ></script>
     <script>
       if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
+        window.addEventListener("load", function () {
           navigator.serviceWorker
-            .register("/sw.js", { scope: '/' })
+            .register("/sw.js")
             .then(res => console.log("service worker registered"))
             .catch(err => console.err("service worker not registered", err));
         });
