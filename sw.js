@@ -7,7 +7,6 @@ const CACHE_NAME = `PWA-EXAMPLE-${VERSION}`;
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
-  "/ygvkn.webmanifest",
   "/icons/*",
   "/app.js",
   "/style.css"
