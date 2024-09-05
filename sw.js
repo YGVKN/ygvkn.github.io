@@ -6,42 +6,20 @@ const CACHE_NAME = `YGVKN-PWA-${VERSION}`;
 // The static resources that the app needs to function.
 const APP_STATIC_RESOURCES = [
   "/",
-  "/app.webmanifest",
+
   "/index.html",
   "/favicon.ico",
+  "/app.webmanifest",
+  "/icons",
   "/style.css",
-  "/app.js",
-  "/icons"
+  "/app.js"
 ];
 
-//self.addEventListener("install", installEvent => {
-//  installEvent.waitUntil(
-//    caches.open(CACHE_NAME).then(cache => {
-//      cache.addAll(APP_STATIC_RESOURCES);
-//    })
-//  );
-//});
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE_NAME);
+self.addEventListener("install", installEvent => {
+  installEvent.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
       cache.addAll(APP_STATIC_RESOURCES);
-    })());
-});
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    (async () => {
-      const names = await caches.keys();
-      await Promise.all(
-        names.map((name) => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
-          }
-        })
-      );
-      await clients.claim();
-    })()
+    })
   );
 });
 
