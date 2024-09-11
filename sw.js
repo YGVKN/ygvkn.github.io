@@ -1,4 +1,4 @@
-const VERSION = "v2.7";
+const VERSION = "v2.8";
 
 const CACHE_NAME = `YGVKN-PWA-${VERSION}`;
 //APPSHELLFILES
@@ -21,7 +21,7 @@ self.addEventListener("install", installEvent => {
     })); });
 
 self.addEventListener("activate", (event) => {
-  const cacheAllowlist = [CACHE_NAME];
+  const cacheAllowlist = [`${CACHE_NAME}`];
 
   event.waitUntil(
     caches.forEach((cache, cacheName) => {
