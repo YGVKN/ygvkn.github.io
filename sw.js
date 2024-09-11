@@ -1,17 +1,15 @@
-const VERSION = "v2.8";
+const VERSION = "v2.9";
 
 const CACHE_NAME = `YGVKN-PWA-${VERSION}`;
 //APPSHELLFILES
 const APP_STATIC_RESOURCES = [
   "/",
   "/index.html",
-
+  "/favicon.ico",
+  "/app.webmanifest",
   "/style.css",
   "/app.js",
   "/icons"
-
-  //"/favicon.ico",
-  //"/app.webmanifest",
 ];
 
 self.addEventListener("install", installEvent => {
