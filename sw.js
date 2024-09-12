@@ -15,7 +15,8 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       cache.addAll(APPSHELLFILES);
-    }, (err) => console.log(err)); });
+    },
+      (err) => {console.log(err)});});
 
 
 self.addEventListener('activate', (event) => {
