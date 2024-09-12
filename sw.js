@@ -1,34 +1,35 @@
-const VERSION = "v2.9";
+const VERSION = "v1.1.1";
 
 const CACHE_NAME = `YGVKN-PWA-${VERSION}`;
-//APPSHELLFILES
-const APP_STATIC_RESOURCES = [
+//
+const APPSHELLFILES = [
   "/",
   "/index.html",
   "/favicon.ico",
   "/app.webmanifest",
   "/style.css",
-  "/app.js",
-  "/icons"
+  "/app.js"
 ];
 
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      cache.addAll(APP_STATIC_RESOURCES);
-    })); });
-
-self.addEventListener("activate", (event) => {
-  const cacheAllowlist = [`${CACHE_NAME}`];
-
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.forEach((cache, cacheName) => {
-      if (!cacheAllowlist.includes(cacheName)) {
-        return caches.delete(cacheName);
-      }
-    }),
+    caches.open(CACHE_NAME).then(cache => {
+      cache.addAll(APPSHELLFILES);
+    }, (err) => console.log(err)); });
+
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (key !== CacheKey) {
+          return caches.delete(key);
+        }
+      }));
+    })
   );
 });
+
 
 self.addEventListener("fetch", fetchEvent => {
   fetchEvent.respondWith(

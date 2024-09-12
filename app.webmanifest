@@ -5,6 +5,7 @@
   "start_url": "/",
   "theme_color": "purple",
   "background_color": "purple",
+  "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
   "icons": [
     {
