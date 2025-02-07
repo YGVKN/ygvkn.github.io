@@ -1,31 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>YGVKN</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="manifest" href="/app.webmanifest" />
-    <link rel="icon" href="/favicon.ico" />
+    <meta charset="utf-8">
+    <title>WΛWW</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <meta name="description" content="ZHUZHACORP">
+    <meta name="keywords" content="ZHUZHACORP">
+    <meta name="author" content="waww.io">
+
+    <meta name="copyright" content="ZHUZHACORP" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="index.js" deref></script>
   </head>
   <body>
-    <button id="find-me">Show my location</button><br />
-    <p id="status"></p>
-    <a id="map-link" target="_blank"></a>
-    <script src="app.js" preload ></script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./sw.js", { scope: "./" }).then(
-          (registration) => {
-            console.log("Service worker registration succeeded ...");
-          },
-          (error) => {
-            console.error(`Service worker registration failed: ${error}`);
-          },
-        );
-      } else {
-        console.error("Service workers are not supported.");
-      }
-    </script>
+    <div id="sphere">
+      <h1>YGVKN/ZHUZHA</h1>
+    </div>
   </body>
 </html>
