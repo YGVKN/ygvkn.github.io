@@ -1,2 +1,2 @@
-
+console.info(document.referrer);
 
